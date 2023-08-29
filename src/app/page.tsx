@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className={inter.className}>
       <h1 className="text-3xl font-bold underline">
-        Welcome!
+        Matteo kuberek
       </h1>
     </div>
   )
