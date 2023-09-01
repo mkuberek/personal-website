@@ -13,6 +13,7 @@ import Link from 'next/link';
 
 const HomePage: React.FC = () => {
   return (
+
     <div className="container">
       <div className="container">
         <img src="images/WebsiteProfilePic1.jpeg" alt="Your Name" className="profile-image" />
@@ -31,7 +32,7 @@ const HomePage: React.FC = () => {
             In today's fast-paced digital landscape, I understand the weight of your aspirations and the ache of unmet goals. Your business is more than just an enterprise; it's your passion, legacy, and livelihood. It deserves to thrive.
 
             <br /><br />
-            ​​This is where I step in.
+            This is where I step in.
             <br /><br />
             I don't just promise results; I craft them meticulously. Your dreams and desires become my mission. With a tailored strategy in hand, we'll navigate the labyrinth of the digital realm, taking every opportunity to make your business turn into an empire.
 
@@ -56,6 +57,12 @@ const HomePage: React.FC = () => {
           <a href="https://www.instagram.com/your-instagram-profile/" target="_blank" rel="noopener noreferrer" className="button">Instagram</a>
           <a href="mailto:your.email@gmail.com" className="button">Email</a>
         </div>
+
+    <div className={inter.className}>
+      <h1 className="text-3xl font-bold underline">
+        Matteo kuberek
+      </h1>
+
     </div>
 
     
