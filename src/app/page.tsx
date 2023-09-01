@@ -11,7 +11,7 @@ import React from 'react';
 import Link from 'next/link';
 
 
-const HomePage: React.FC = () => {
+const page: React.FC = () => {
   return (
     <div className="container">
       <div className="container">
@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
             In today's fast-paced digital landscape, I understand the weight of your aspirations and the ache of unmet goals. Your business is more than just an enterprise; it's your passion, legacy, and livelihood. It deserves to thrive.
 
             <br /><br />
-            ​​This is where I step in.
+            ​This is where I step in.
             <br /><br />
             I don't just promise results; I craft them meticulously. Your dreams and desires become my mission. With a tailored strategy in hand, we'll navigate the labyrinth of the digital realm, taking every opportunity to make your business turn into an empire.
 
@@ -62,4 +62,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default page;
