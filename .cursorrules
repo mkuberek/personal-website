@@ -1,0 +1,171 @@
+# Cursor Rules for matteokuberek.com
+
+## File Naming Conventions
+
+- All file names MUST be lowercase with hyphens for separation
+- Example: `hero-section.tsx`, `contact-form.tsx`
+- Exceptions: README.md, LICENSE, .env files, and configuration files that require specific casing
+- Component files: `component-name.tsx`
+- Documentation files: `document-name.md` in `/docs` folder
+- Type definition files: `type-name.ts` in `/src/types` folder
+
+## Component Structure
+
+- All components in `/src/app/components/`
+- Use functional components with TypeScript
+- Always define prop interfaces
+- Use `'use client'` directive when client-side features needed
+- One component per file
+- Export components as named exports: `export const ComponentName`
+
+### Component Template
+
+```typescript
+'use client';
+
+import React from 'react';
+
+interface ComponentNameProps {
+  title?: string;
+  // Define all props with types
+}
+
+export const ComponentName: React.FC<ComponentNameProps> = ({ title }) => {
+  return (
+    <div>
+      {/* Component JSX */}
+    </div>
+  );
+};
+```
+
+## TypeScript Standards
+
+- Strict mode enabled
+- Always define types/interfaces
+- No `any` types unless absolutely necessary
+- Use proper type inference
+- Define prop interfaces for all components
+- Use type aliases for complex types
+
+## Styling Guidelines
+
+- Primary: Tailwind CSS utility classes
+- Use semantic class names when needed
+- Responsive design: mobile-first approach
+- Global styles only in `globals.css`
+- Maintain consistent spacing and typography
+- Follow design system colors and tokens
+
+## Code Quality
+
+- Clean, readable code
+- Self-documenting code preferred
+- Comments only for complex logic
+- Remove console.logs before commit
+- No unused imports or variables
+- Proper error handling
+- Use early returns to reduce nesting
+
+## Project Organization
+
+```
+src/
+├── app/
+│   ├── components/     # All React components
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Main page
+│   └── globals.css     # Global styles
+└── types/              # Type definitions
+```
+
+## Documentation
+
+- All documentation in `/docs` folder
+- File names lowercase with hyphens
+- Use markdown format
+- Keep documentation up to date
+- Document major changes and decisions
+
+## Git Workflow
+
+- Meaningful commit messages
+- Small, focused commits
+- Test locally before pushing
+- No sensitive data in repository
+- Review changes before committing
+
+## Next.js Specific
+
+- Use App Router (not Pages Router)
+- Leverage Next.js Image component for images
+- Use proper metadata API for SEO
+- Client components: add `'use client'` directive
+- Server components by default when possible
+
+## Performance
+
+- Optimize images before adding to project
+- Remove unused dependencies
+- Minimize bundle size
+- Use dynamic imports for code splitting when beneficial
+- Monitor build output for warnings
+
+## Accessibility
+
+- Use semantic HTML elements
+- Provide alt text for all images
+- Ensure keyboard navigation works
+- Maintain sufficient color contrast
+- Use ARIA labels when needed
+- Test with screen readers when possible
+
+## Security
+
+- No sensitive data in code
+- No API keys in repository
+- Use environment variables for secrets
+- Keep dependencies updated
+- Review security advisories
+
+## Deployment
+
+- Deployed to Vercel via GitHub
+- Main branch auto-deploys to production
+- Test builds locally before pushing
+- Review Vercel deployment logs
+- Monitor for build errors
+
+## Design Philosophy
+
+- Minimalist and direct
+- Clean, elegant interfaces
+- Mobile-responsive always
+- Fast loading times
+- User-focused design
+- Professional appearance
+
+## Dependencies
+
+- Keep dependencies minimal
+- Remove unused packages
+- Update regularly for security
+- Review bundle impact before adding
+- Prefer lightweight alternatives
+
+## Testing
+
+- Test responsive design on multiple devices
+- Verify all links work
+- Check performance metrics
+- Validate HTML and accessibility
+- Test in different browsers
+
+## This Project Specific
+
+- Single-page application
+- No backend or API routes needed
+- Focus on simplicity and elegance
+- Contact info and social links primary purpose
+- Trading/finance professional theme
+- No personal photos (use abstract/graphics)
