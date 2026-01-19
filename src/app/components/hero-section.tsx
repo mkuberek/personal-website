@@ -4,27 +4,61 @@ import React from 'react';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
+      {/* Trading Grid Background */}
+      <div className="absolute inset-0 opacity-[0.03]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(rgba(251, 146, 60, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(251, 146, 60, 0.5) 1px, transparent 1px)',
+          backgroundSize: '50px 50px'
+        }} />
+      </div>
+      
+      {/* Subtle Gradient Overlays */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl" />
+      
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="mb-8 animate-fade-in">
-          <div className="inline-block mb-6">
-            <div className="w-24 h-24 mx-auto bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-2xl rotate-6 hover:rotate-12 transition-transform duration-300 shadow-xl" />
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-emerald-400 via-cyan-500 to-blue-500 bg-clip-text text-transparent">
-            Matteo Kuberek
+          <h1 className="text-6xl md:text-8xl font-orbitron font-black mb-3 tracking-tight leading-none mt-8">
+            <span className="bg-gradient-to-r from-orange-300/90 via-amber-400/80 to-orange-300/70 bg-clip-text text-transparent">
+              MATTEO
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-amber-400/80 via-orange-300/90 to-amber-400/70 bg-clip-text text-transparent">
+              KUBEREK
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 font-light">
-            Day Trader
-          </p>
+          
+          <div className="flex items-center justify-center gap-3 mt-6">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-orange-500/30" />
+            <p className="text-xl md:text-2xl text-gray-300 font-rajdhani font-semibold tracking-widest uppercase">
+              Day Trader
+            </p>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-orange-500/30" />
+          </div>
         </div>
         
-        <div className="mt-12 space-y-4">
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            Self-taught trader making 4-5 figures daily through strategic prop firm trading.
-          </p>
-          <p className="text-base md:text-lg text-gray-500">
-            Sharing knowledge and insights with the trading community.
-          </p>
+        <div className="mt-12 space-y-6">
+          {/* Trading Stats Style */}
+          <div className="max-w-2xl mx-auto bg-gray-900/40 border border-gray-800/50 rounded-xl p-6 backdrop-blur-sm">
+            <div className="grid grid-cols-3 gap-4 text-center mb-4">
+              <div>
+                <div className="text-orange-400/60 text-xs font-rajdhani tracking-wider mb-1">DAILY RETURNS</div>
+                <div className="text-white font-orbitron font-bold text-lg">4-5 FIGS</div>
+              </div>
+              <div className="border-l border-r border-gray-800">
+                <div className="text-orange-400/60 text-xs font-rajdhani tracking-wider mb-1">STRATEGY</div>
+                <div className="text-white font-orbitron font-bold text-lg">PROP FIRMS</div>
+              </div>
+              <div>
+                <div className="text-orange-400/60 text-xs font-rajdhani tracking-wider mb-1">EXPERIENCE</div>
+                <div className="text-white font-orbitron font-bold text-lg">SELF-TAUGHT</div>
+              </div>
+            </div>
+            <p className="text-sm text-gray-400 font-rajdhani">
+              Sharing knowledge and insights with the trading community
+            </p>
+          </div>
         </div>
 
         <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -32,7 +66,7 @@ export const HeroSection: React.FC = () => {
             href="https://www.instagram.com/matteokuberek/"
             target="_blank"
             rel="noopener noreferrer"
-            className="group px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full font-medium text-white hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[200px]"
+            className="group px-8 py-4 bg-gradient-to-r from-orange-600/70 to-amber-600/60 hover:from-orange-600/90 hover:to-amber-600/80 border border-orange-500/20 hover:border-orange-500/40 rounded-lg font-rajdhani font-bold tracking-wider text-white hover:shadow-xl hover:shadow-orange-500/20 hover:scale-105 transition-all duration-300 min-w-[200px] uppercase"
           >
             <span className="flex items-center justify-center gap-2">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -46,7 +80,7 @@ export const HeroSection: React.FC = () => {
             href="https://www.tiktok.com/@matteokuberek"
             target="_blank"
             rel="noopener noreferrer"
-            className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full font-medium text-white hover:shadow-2xl hover:scale-105 transition-all duration-300 min-w-[200px]"
+            className="group px-8 py-4 bg-gradient-to-r from-amber-600/60 to-orange-600/70 hover:from-amber-600/80 hover:to-orange-600/90 border border-amber-500/20 hover:border-amber-500/40 rounded-lg font-rajdhani font-bold tracking-wider text-white hover:shadow-xl hover:shadow-amber-500/20 hover:scale-105 transition-all duration-300 min-w-[200px] uppercase"
           >
             <span className="flex items-center justify-center gap-2">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">

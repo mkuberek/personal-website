@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .font-orbitron {
+    font-family: var(--font-orbitron), system-ui, sans-serif;
+  }
+  
+  .font-rajdhani {
+    font-family: var(--font-rajdhani), system-ui, sans-serif;
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -56,10 +66,10 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(52, 211, 153);
+  background: rgba(251, 146, 60, 0.4);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(16, 185, 129);
+  background: rgba(249, 115, 22, 0.6);
 }
