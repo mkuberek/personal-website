@@ -56,7 +56,26 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-15FEWR8N0C');
+            gtag('config', 'G-15FEWR8N0C', {
+              page_path: window.location.pathname,
+              send_page_view: true
+            });
+            
+            // Track external link clicks
+            document.addEventListener('click', function(e) {
+              const target = e.target.closest('a');
+              if (target && target.href && target.href.startsWith('http')) {
+                const isExternal = !target.href.includes(window.location.hostname);
+                if (isExternal) {
+                  gtag('event', 'click', {
+                    event_category: 'outbound',
+                    event_label: target.href,
+                    link_text: target.textContent || target.innerText,
+                    link_url: target.href
+                  });
+                }
+              }
+            });
           `}
         </Script>
       </body>

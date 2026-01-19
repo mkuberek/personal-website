@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { trackExternalLink } from './analytics';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -66,6 +67,7 @@ export const HeroSection: React.FC = () => {
             href="https://www.instagram.com/matteokuberek/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackExternalLink('https://www.instagram.com/matteokuberek/', 'Instagram - Hero CTA')}
             className="group px-8 py-4 bg-gradient-to-r from-orange-600/70 to-amber-600/60 hover:from-orange-600/90 hover:to-amber-600/80 border border-orange-500/20 hover:border-orange-500/40 rounded-lg font-rajdhani font-bold tracking-wider text-white hover:shadow-xl hover:shadow-orange-500/20 hover:scale-105 transition-all duration-300 min-w-[200px] uppercase"
           >
             <span className="flex items-center justify-center gap-2">
@@ -80,6 +82,7 @@ export const HeroSection: React.FC = () => {
             href="https://www.tiktok.com/@matteokuberek"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackExternalLink('https://www.tiktok.com/@matteokuberek', 'TikTok - Hero CTA')}
             className="group px-8 py-4 bg-gradient-to-r from-amber-600/60 to-orange-600/70 hover:from-amber-600/80 hover:to-orange-600/90 border border-amber-500/20 hover:border-amber-500/40 rounded-lg font-rajdhani font-bold tracking-wider text-white hover:shadow-xl hover:shadow-amber-500/20 hover:scale-105 transition-all duration-300 min-w-[200px] uppercase"
           >
             <span className="flex items-center justify-center gap-2">

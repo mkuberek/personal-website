@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { trackExternalLink } from './analytics';
 
 export const ContactSection: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ export const ContactSection: React.FC = () => {
           <div className="flex flex-col gap-6">
             <a
               href="mailto:contact@matteokuberek.com"
+              onClick={() => trackExternalLink('mailto:contact@matteokuberek.com', 'Email - Contact Section')}
               className="group flex items-center justify-center gap-4 bg-gradient-to-r from-orange-600/60 via-amber-600/50 to-orange-600/60 hover:from-orange-600/80 hover:via-amber-600/70 hover:to-orange-600/80 rounded-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-500/20"
             >
               <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -36,6 +38,7 @@ export const ContactSection: React.FC = () => {
                 href="https://www.instagram.com/matteokuberek/"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackExternalLink('https://www.instagram.com/matteokuberek/', 'Instagram - Contact Section')}
                 className="group flex items-center justify-center gap-3 bg-gradient-to-r from-orange-600/50 to-amber-600/50 hover:from-orange-600/70 hover:to-amber-600/70 border border-orange-500/20 hover:border-orange-500/40 rounded-lg p-5 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/15"
               >
                 <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -48,6 +51,7 @@ export const ContactSection: React.FC = () => {
                 href="https://www.tiktok.com/@matteokuberek"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackExternalLink('https://www.tiktok.com/@matteokuberek', 'TikTok - Contact Section')}
                 className="group flex items-center justify-center gap-3 bg-gradient-to-r from-amber-600/50 to-orange-500/50 hover:from-amber-600/70 hover:to-orange-500/70 border border-amber-500/20 hover:border-amber-500/40 rounded-lg p-5 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/15"
               >
                 <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
